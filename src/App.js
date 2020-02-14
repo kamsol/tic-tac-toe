@@ -5,11 +5,11 @@ import Board from './components/board';
 
 class App extends React.Component {
 
-
   state = {
-    units: [],
+    units: new Array(9),
     player: 'player-1'
   }
+ 
 
   play = (player) => {
     this.setState({player});
@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <Header player={this.state.player}/>
-        <Board  player={this.state.player} play={this.play} />
+        <Board  units={this.state.units} player={this.state.player} play={this.play} />
       </div>
     );
   }
