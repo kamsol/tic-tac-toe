@@ -4,6 +4,9 @@ html {
   box-sizing: border-box;
   font-size: 16px;
 }
+.application-wrapper{
+  position: relative;
+}
 .container {
   margin: 3rem auto 5rem;
   width: 90%;
@@ -21,8 +24,8 @@ header span{
 .player-names-container {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #233464;
 }
 .units-container {
@@ -54,4 +57,48 @@ button {
 }
 .circle {
   color: #233464;
+}
+.result-container{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result-section{
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 275px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+.result-section p{
+  font-size: 1.15rem;
+}
+.result-section p span{
+  color: rgb(51, 122, 81);
+  font-weight: 600;
+}
+.result-section button{
+  background-color: #233464;
+  color:#ffffff;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.display-none{
+  display: none;
+}
+
+@media  screen and (max-width: 480px){
+  header{
+    padding: 1rem .5rem;
+  }
 }

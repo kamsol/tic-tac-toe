@@ -6,7 +6,7 @@ const Board = (props) => {
     return (
         <div className="units-container">
             {[...units].map((x, i) =>
-                <Unit guid={`unit-${++i}`} player={player} key={i} play={play} />
+                <Unit index={i} guid={`unit-${++i}`} player={player} key={i} play={play} />
             )}
         </div>
     )
