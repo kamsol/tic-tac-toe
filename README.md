@@ -10,4 +10,4 @@
 
 ## Description
 
-+ This is a demo for React.
++ This is a tic-tac-toe game. This is also a demo for usage of React.
