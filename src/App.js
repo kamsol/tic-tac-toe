@@ -59,10 +59,12 @@ class App extends React.Component {
     }
 
     if (!this.tmpUnits.includes(undefined)) {
-      this.setState({
-        winner: 'No winner!'
-      });
-      this.resultRef.current.classList.remove('display-none');
+      if (!this.isWinner) {
+        this.setState({
+          winner: 'No winner!'
+        });
+        this.resultRef.current.classList.remove('display-none');
+      }
     }
   }
 
