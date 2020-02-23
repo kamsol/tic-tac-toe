@@ -3,12 +3,12 @@ import React from 'react';
 const Unit = (props) => {
   const { index, guid, player, play } = props;
 
-  function clickHandler(id) {
-    let element = document.getElementById(id);
-    let elementContent = element.innerText;
+  function clickHandler(event) {
+
+    let element = event.target; // document.getElementById(event.target.id);
     let changePlayer;
 
-    if (elementContent === null || elementContent === "") {
+    if (element.innerText === null || element.innerText === "") {
       if (player === "player_1") {
         element.innerText = "O";
         element.classList.add("circle");
@@ -23,7 +23,7 @@ const Unit = (props) => {
     }
   }
   return (
-    <button id={guid} className="icons" onClick={() => { clickHandler(guid) }}></button>
+    <button id={guid} className="icons" onClick={(event) => { clickHandler(event) }}></button>
   );
 }
 
