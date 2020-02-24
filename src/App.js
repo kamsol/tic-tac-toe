@@ -59,7 +59,9 @@ class App extends React.Component {
     }
 
     if (!this.tmpUnits.includes(undefined)) {
+      console.log('1')
       if (!this.isWinner) {
+        console.log('2')
         this.setState({
           winner: 'No winner!'
         });
@@ -70,6 +72,7 @@ class App extends React.Component {
 
   resetState() {
     this.setState(this.initilSatet);
+    this.isWinner = false;
     this.resultRef.current.classList.add('display-none');
     this.containerKey = new Date();
   }
